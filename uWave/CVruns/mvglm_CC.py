@@ -22,12 +22,12 @@ import custom_scorer
 
 # load data and create train/test split
 # load in the training and testing data
-train_files = ['../data/UWaveGestureLibrary{}/UWaveGestureLibrary{}_TRAIN.tsv'\
+train_files = ['../data/UWaveGestureLibrary{}/UWaveGestureLibrary{}_TRAIN.txt'\
         .format(i, i) for i in ['X', 'Y', 'Z']]
 train_data = {i: pd.read_csv(f, sep="\t", header=None).values[:,1:] \
               for i, f in enumerate(train_files)}
 
-test_files = ['../data/UWaveGestureLibrary{}/UWaveGestureLibrary{}_TEST.tsv'\
+test_files = ['../data/UWaveGestureLibrary{}/UWaveGestureLibrary{}_TEST.txt'\
         .format(i, i) for i in ['X', 'Y', 'Z']]
 test_data = {i: pd.read_csv(f, sep="\t", header=None).values[:,1:] \
               for i, f in enumerate(test_files)}
